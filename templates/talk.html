@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Name</title>
+
+  </head>
+  <body>
+
+    <div ng-app="siteApp" ng-controller="customerCtrl">
+
+      <ul>
+        <li ng-repeat="x in names">
+          {[{ x.Name + ', ' + x.Country }]}
+        </li>
+      </ul>
+
+
+    </div>
+
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+    <!-- Imported Controller -->
+    <script src="{{ url_for('static', filename='js/talk.js') }}"></script>
+
+  
+  </body>
+</html>
