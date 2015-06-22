@@ -7,5 +7,6 @@ app.controller('mainCtrl4', function($scope) {
 
   $scope.switch1 = true;
   $scope.switch2 = false;
+  $scope.switch3 = true;
 
 });
