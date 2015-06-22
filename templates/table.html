@@ -34,6 +34,24 @@
         </tr>
       </table>
 
+      <br>
+      <h3>Specified in Angular</h3>
+      <br>
+
+      <table style="background-color:ffffff">
+        <tr ng-repeat="x in visited | orderBy:'place'">
+          <!-- Will Only Show When Odd Index -->
+          <td ng-if="$odd" style="background-color:#f1f1f1">{[{ x.place}]}</td>
+          <!-- Will Only Show When Even Index -->
+          <td ng-if="$even">{[{ x.place }]}</td>
+
+          <!-- Will Only Show When Odd Index -->
+          <td ng-if="$odd" style="background-color:#f1f1f1">{[{ x.year}]}</td>
+          <!-- Will Only Show When Even Index -->
+          <td ng-if="$even">{[{ x.year }]}</td>
+        </tr>
+      </table>
+
 
 
     </div>

@@ -26,5 +26,9 @@ def talk():
 def table():
     return render_template('table.html')
 
+@app.route('/hide')
+def hide():
+    return render_template('hide.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
