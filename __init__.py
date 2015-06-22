@@ -34,5 +34,9 @@ def hide():
 def event():
     return render_template('event.html')
 
+@app.route('/val')
+def val():
+    return render_template('validate.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
