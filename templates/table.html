@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- External CSS -->
+  
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/table.css') }}">
+    
+    <title>Table</title>
+
+  </head>
+  <body>
+
+    <div ng-app="siteApp3" ng-controller="mainCtrl3">
+
+      <h3>Visited Places:</h3>
+
+      <table>
+        <tr ng-repeat="x in visited | orderBy:'place'">
+          <td>{[{ x.place }]}</td>
+          <td>{[{ x.year }]}</td>
+        </tr>
+      </table>
+
+      <br>
+      <h3>Same w/ Indexes</h3>
+
+      <table>
+        <tr ng-repeat="x in visited | orderBy:'place'">
+          <td>{[{ $index + 1 }]}</td>
+          <td>{[{ x.place}]}</td>
+          <td>{[{ x.year }]}</td>
+        </tr>
+      </table>
+
+
+
+    </div>
+
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>  
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    
+    <!-- External Controler Example -->
+    <script src="{{ url_for('static', filename='js/mainCtrl3.js') }}"></script>
+
+  </body>
+</html>

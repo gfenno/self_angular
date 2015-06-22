@@ -22,5 +22,9 @@ def info():
 def talk():
     return render_template('talk.html')
 
+@app.route('/table')
+def table():
+    return render_template('table.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
