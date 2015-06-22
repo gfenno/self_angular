@@ -30,5 +30,9 @@ def table():
 def hide():
     return render_template('hide.html')
 
+@app.route('/event')
+def event():
+    return render_template('event.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
